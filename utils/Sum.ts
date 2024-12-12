@@ -11,4 +11,4 @@ export type Sum<
   ? Sum<R, Plus<Res, H>, Max, [...CurrentIter, 0]> // This would need some rework
   : [Res, T];
 
-type TestSum = Sum<[1, 2, 3, 4]>;
+//type TestSum = Sum<[1, 2, 3, 4]>;

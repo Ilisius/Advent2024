@@ -176,6 +176,6 @@ export type AbsoluteMinus<N1 extends number, N2 extends number> = LessThan<
   ? Minus<N2, N1>
   : Minus<N1, N2>;
 
-type TestMinus = AbsoluteMinus<100, 200>; // 100
-type TestMinus2 = AbsoluteMinus<36510, 34936>; // 1574
-type TestMinus3 = AbsoluteMinus<1000, 91>; // donne 1009 au lieu de 909
+// type TestMinus = AbsoluteMinus<100, 200>; // 100
+// type TestMinus2 = AbsoluteMinus<36510, 34936>; // 1574
+// type TestMinus3 = AbsoluteMinus<1000, 91>; // donne 1009 au lieu de 909

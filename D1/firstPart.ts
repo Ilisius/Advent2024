@@ -48,13 +48,11 @@ type ParseLines<
     : never
   : [FirstList, SecondList, I];
 
-type TestParseLines1 = ParseLines<TestGetLines>;
-type TestParseLines2 = ParseLines<TestParseLines1[2]>;
+export type TestParseLines1 = ParseLines<TestGetLines>;
+export type TestParseLines2 = ParseLines<TestParseLines1[2]>;
 
 type Col1 = [...TestParseLines1[0], ...TestParseLines2[0]];
 type Col2 = [...TestParseLines1[1], ...TestParseLines2[1]];
-
-type AA = Col1["length"];
 
 export type FirstListSorted = QuickSort<Col1>;
 
@@ -98,5 +96,4 @@ type SumOfDistances1 = Sum<TestDistanceList>;
 type SumOfDistances2 = Sum<SumOfDistances1[1]>;
 
 type Res = Plus<SumOfDistances1[0], SumOfDistances2[0]>;
-// 1_920_620
 // 1_970_720

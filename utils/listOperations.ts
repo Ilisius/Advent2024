@@ -15,10 +15,10 @@ type GetValuesLesserOrEqThanPivot<
     : GetValuesLesserOrEqThanPivot<T, Pivot, Res>
   : Res;
 
-type TestGetValuesLessOrEqToPivot = GetValuesLesserOrEqThanPivot<
-  [1, 2, 3, 4, 5],
-  3
->;
+// type TestGetValuesLessOrEqToPivot = GetValuesLesserOrEqThanPivot<
+//   [1, 2, 3, 4, 5],
+//   3
+// >;
 
 type GetValuesGreaterThanPivot<
   List extends number[],
@@ -30,10 +30,10 @@ type GetValuesGreaterThanPivot<
     : GetValuesGreaterThanPivot<T, Pivot, Res>
   : Res;
 
-type TestGetValuesGreaterOrEqToPivot = GetValuesGreaterThanPivot<
-  [1, 2, 3, 4, 5],
-  3
->;
+// type TestGetValuesGreaterOrEqToPivot = GetValuesGreaterThanPivot<
+//   [1, 2, 3, 4, 5],
+//   3
+// >;
 
 /**
 def quicksort(lst):
@@ -62,3 +62,5 @@ export type QuickSort<
       >
     ]
   : never;
+
+//type TestQuickSort = QuickSort<[5, 4]>;

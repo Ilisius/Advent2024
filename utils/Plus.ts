@@ -175,7 +175,7 @@ export type Plus<
       InitialLength
     >;
 
-type B = Plus<1239, 1234>; // 2473
-type C = Plus<999, 999>; // 141
+// type B = Plus<1239, 1234>; // 2473
+// type C = Plus<999, 999>; // 141
 // 1_898
 // 1_998

@@ -1,6 +1,5 @@
 import { GetFirstElement, RemoveFirstElement } from "./util";
-
-type Digit = 0 | 1 | 2 | 3 | 4 | 5 | 6 | 7 | 8 | 9;
+import { Digit } from "./Digit";
 
 type GreaterNumber = {
   0: [0, 1, 1, 1, 1, 1, 1, 1, 1, 1];
@@ -35,7 +34,7 @@ type CompareTwoLengths<A extends number[], B extends number[]> = IsAInferiorToB<
   ? 0
   : true;
 
-type A = CompareTwoLengths<[0, 1, 2, 3], [0, 1, 2, 3, 4]>;
+//type A = CompareTwoLengths<[0, 1, 2, 3], [0, 1, 2, 3, 4]>;
 
 type ResToBoolean<N extends 0 | 1 | -1> = N extends 0
   ? 0
@@ -103,24 +102,24 @@ export type LessOrEqual<T extends number, U extends number> = Equal<
   ? true
   : LessThan<T, U>;
 
-type TestLessOrEqual = LessOrEqual<1, 2>; // true
-type TestLessOrEqual2 = LessOrEqual<1, 1>; // true
-type TestLessOrEqual3 = LessOrEqual<2, 1>; // false
+// type TestLessOrEqual = LessOrEqual<1, 2>; // true
+// type TestLessOrEqual2 = LessOrEqual<1, 1>; // true
+// type TestLessOrEqual3 = LessOrEqual<2, 1>; // false
 
-type TestLessThan = LessThan<1, 2>; // true
-type TestLessThan2 = LessThan<2, 2>; // false
-type TestLessThan3 = LessThan<2, 1>; // false
+// type TestLessThan = LessThan<1, 2>; // true
+// type TestLessThan2 = LessThan<2, 2>; // false
+// type TestLessThan3 = LessThan<2, 1>; // false
 
-type TestGreaterThan = GreaterThan<2, 1>; // true
-type TestGreaterThan2 = GreaterThan<2, 2>; // false
+// type TestGreaterThan = GreaterThan<2, 1>; // true
+// type TestGreaterThan2 = GreaterThan<2, 2>; // false
 
-type TestGreaterOrEqual = GreaterOrEqual<2, 1>; // true
-type TestGreaterOrEqual2 = GreaterOrEqual<2, 2>; // true
-type TestGreaterOrEqual3 = GreaterOrEqual<1, 2>; // false
+// type TestGreaterOrEqual = GreaterOrEqual<2, 1>; // true
+// type TestGreaterOrEqual2 = GreaterOrEqual<2, 2>; // true
+// type TestGreaterOrEqual3 = GreaterOrEqual<1, 2>; // false
 
-type TestEqual = Equal<1, 1>;
-type TestEqual2 = Equal<1, 2>;
-type TestEqual3 = Equal<2, 1>;
+// type TestEqual = Equal<1, 1>;
+// type TestEqual2 = Equal<1, 2>;
+// type TestEqual3 = Equal<2, 1>;
 
 export type Min<
   T extends number[],
@@ -129,4 +128,4 @@ export type Min<
   ? Min<Tail, LessThan<Head, Res> extends true ? Head : Res>
   : Res;
 
-type TestMin = Min<[9, 2, 3, 4, 1]>; // 1
+//type TestMin = Min<[9, 2, 3, 4, 1]>; // 1
